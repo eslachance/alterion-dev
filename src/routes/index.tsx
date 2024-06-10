@@ -1,3 +1,4 @@
+import ServerTest from "~/components/ServerTest";
 export default function Home() {
   return (
     <main class="text-center mx-auto text-gray-700 p-4">
@@ -7,7 +8,7 @@ export default function Home() {
         </div>
       </h1>
       <h2 class="max-6-xs text-4xl">Under ... well... development, really.</h2>
-
+      <ServerTest />
       <div class="flex flex-col justify-center items-center gap-2 pt-8">
         <h3 class="text-2xl">Built With</h3>
         <a

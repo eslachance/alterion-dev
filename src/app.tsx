@@ -11,11 +11,11 @@ export default function App() {
   return (
     <Router
       root={(props) => (
-        <>
+        <Suspense>
           <Nav />
           <ServerTest />
-          <Suspense>{props.children}</Suspense>
-        </>
+          {props.children}
+        </Suspense>
       )}
     >
       <FileRoutes />
