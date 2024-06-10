@@ -1,10 +1,12 @@
 import { createAsync, useAction  } from '@solidjs/router';
 import { createEffect } from "solid-js";
 
-import { getCounter, incrementCounter } from '~/api';
+import { init, getCounter, incrementCounter } from '~/api';
 
 export const route = {
-  load: () => getCounter(),
+  load() {
+    getCounter()
+  }
 }
 
 export default function Counter() {

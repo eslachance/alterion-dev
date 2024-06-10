@@ -1,13 +1,13 @@
 import { cache, action } from '@solidjs/router';
-import { inc, has, set, get } from './db';
+import { inc, get } from './db';
+
+export const init = async () => {
+  return get('count');
+}
 
 export const getCounter = cache(async() => {
   'use server';
-  console.log('Getting counter');
-  if(!has('count')) {
-    console.log('Resetting counter');
-    set('count', 0);
-  }
+  console.log('Getting counter: ', get('count'));
   return get('count') as Number;
 }, 'counter');
 
